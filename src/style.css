@@ -1,96 +1,52 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* src/style.css - minimal, respectful, neutral */
+:root{
+  --bg: #fbfbfb;
+  --card: #fff;
+  --muted: #666;
+  --accent: #2e7a7a;
+  --text: #111;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+*{box-sizing:border-box}
+body{font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial; margin:0; background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased}
+.app{max-width:1100px;margin:28px auto;padding:0 18px}
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+.header h1{margin:0;font-size:1.6rem}
+.header .subtitle{margin:6px 0 18px;color:var(--muted)}
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+.controls{display:flex;gap:12px;align-items:center;margin-bottom:14px}
+.controls input{flex:1;padding:8px 10px;border:1px solid #e5e5e5;border-radius:8px;font-size:14px}
+.status{min-width:120px;color:var(--muted);font-size:13px}
+.error{color:#b00020}
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-bottom:22px}
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
+/* Card */
+.card{background:transparent}
+.card-btn{display:flex;align-items:stretch;gap:12px;padding:12px;border-radius:10px;border:1px solid #eee;background:var(--card);width:100%;text-align:left;cursor:pointer;transition:box-shadow .18s,transform .12s}
+.card-btn:hover{box-shadow:0 6px 18px rgba(16,24,32,0.08);transform:translateY(-3px)}
+.card-media{width:88px;height:88px;flex:0 0 88px;overflow:hidden;border-radius:8px;background:#f2f2f2;display:flex;align-items:center;justify-content:center}
+.card-media img{width:100%;height:100%;object-fit:cover}
+.card-body{flex:1}
+.card-title{margin:0;font-size:1.02rem}
+.card-meta{margin:6px 0;color:var(--muted);font-size:13px}
+.card-role{margin:0;color:var(--accent);font-size:13px}
+.card-action{align-self:center;font-size:28px;color:#ccc;flex:0 0 28px;padding-left:8px}
 
-.card {
-  padding: 2em;
-}
+/* Modal */
+.modal-backdrop{position:fixed;inset:0;background:rgba(4,6,8,0.36);display:flex;align-items:center;justify-content:center;padding:18px;z-index:999}
+.modal{background:var(--card);width:960px;max-width:100%;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,0.2);outline:none}
+.modal-header{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid #f0f0f0}
+.modal-header h2{margin:0;font-size:1.1rem}
+.modal-close{background:transparent;border:0;font-size:20px;cursor:pointer}
+.modal-content{padding:18px}
 
-.read-the-docs {
-  color: #888;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
+/* detail */
+.detail{display:flex;gap:18px;align-items:flex-start}
+.detail-media img{width:220px;height:220px;object-fit:cover;border-radius:8px;background:#eee}
+.detail-body{flex:1}
+.detail-body h3{margin-top:0}
+.muted{color:var(--muted);font-size:13px}
+.detail-actions{display:flex;gap:8px;margin-top:12px}
+.detail-actions button{padding:8px 12px;border-radius:8px;border:1px solid #ddd;background:#fff;cursor:pointer}
+.footer{text-align:center;color:var(--muted);padding:18px 0;font-size:13px}
