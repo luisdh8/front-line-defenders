@@ -58,20 +58,20 @@ function App() {
     <main className={styles.app}>
       <header className={styles.header}>
         <h1>Guardianes del Territorio</h1>
-        <p className={styles.subtitle}>Remembering people killed while defending territory and nature in Mexico</p>
+        <p className={styles.subtitle}>Reconocimiento de las personas que fueron asesinadas por intentar proteger un territorio y la naturaleza de México</p>
       </header>
 
       <section className={styles.controls}>
         <input
           aria-label="Search guardians"
-          placeholder="Search by name, territory or role..."
+          placeholder="Buscar por nombre, territorio o rol…"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
         <div className={styles.status}>
           {loading && <span>Loading…</span>}
           {error && <span className={styles.error}>{error}</span>}
-          {!loading && !error && <span>{filtered.length} records</span>}
+          {!loading && !error && <span>{filtered.length} registros</span>}
         </div>
       </section>
 
