@@ -48,9 +48,9 @@ src/
 ## 🛠️ Tecnologías utilizadas
 
 - [React](https://react.dev/) + [Vite](https://vitejs.dev/)  
-- [Tailwind CSS](https://tailwindcss.com/)  
-- [Axios](https://axios-http.com/) para consumo de API  
 - [Vercel](https://vercel.com/) para despliegue y hosting
+- [MockAPI](https://mockapi.io/) para la generación de JSON y hosting de API
+
 
 ---
 
@@ -90,6 +90,8 @@ Cada registro proviene de fuentes **verificadas y públicas**, incluyendo:
 - [El País](https://elpais.com)
 - [HRD Memorial](https://hrdmemorial.org)
 - [Wikipedia](https://es.wikipedia.org)
+- Fuente de inspiración: 
+   - [Front Line Defenders](https://www.frontlinedefenders.org/)
 
 Los datos se almacenan en formato JSON, con estructura:
 ```json
