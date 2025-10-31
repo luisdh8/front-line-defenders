@@ -128,21 +128,3 @@ Puedes proponer mejoras en el código, accesibilidad o nuevas fuentes de datos v
    git checkout -b mejora/nombre
    ```
 3. Envía un pull request con una descripción clara.
-
----
-
-## 🕯️ Agradecimientos
-
-A las familias, organizaciones y periodistas que continúan documentando y defendiendo la vida, la justicia y el territorio.  
-Este proyecto está dedicado a su memoria y resistencia.
-
----
-
-### 🖋️ Licencia
-Este proyecto está bajo la licencia **Creative Commons Atribución-NoComercial-CompartirIgual (CC BY-NC-SA 4.0)**.  
-Puedes reutilizarlo con fines educativos y no comerciales, citando la fuente.
-
----
-
-**Desarrollado con respeto y esperanza.**  
-_“Mientras exista la memoria, habrá justicia.”_
